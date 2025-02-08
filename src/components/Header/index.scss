@@ -1,0 +1,36 @@
+.header {
+    &-row {
+        padding: 20px 0;
+        margin-bottom: 30px;
+        @include templateFlex(space-between, center);
+        border-bottom: 4px solid transparentize($gray-color, .96);
+    }
+
+    &-logo {
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 600;
+
+        span {
+            color: $primary-color
+        }
+
+        @media (max-width: 425px) {
+            font-size: 18px;
+        }
+    }
+
+    &-menu {
+        @include templateFlex(space-between, center);
+        gap: 40px;
+
+        @media (max-width: 425px) {
+            gap: 20px;
+            font-size: 16px;
+        }
+    }
+
+    &-menu__active-link {
+        color: $primary-color;
+    }
+}

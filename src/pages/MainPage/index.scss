@@ -1,0 +1,46 @@
+.cards {
+    &-row {
+        // @include templateFlex(center, center);
+        // flex-wrap: wrap;
+        // gap: 20px;
+        display: grid;
+        grid-template: repeat(4, minmax(150px, 1fr)) / repeat(3, minmax(150px, 1fr));
+        gap: 30px;
+
+        @include mobile {
+            grid-template: repeat(2, minmax(150px, 1fr)) / repeat(2, minmax(150px, 1fr));
+        }
+
+        @media (max-width: 425px) {
+            grid-template: repeat(2, minmax(150px, 1fr)) / repeat(1, minmax(150px, 1fr));
+        }
+    }
+
+    &-button {
+        display: block;
+        margin: 40px auto;
+        padding: 14px 40px;
+        @include templateFont(18, 700, 1);
+        color: $light-color;
+        border-radius: 14px;
+        background-color: $primary-color;
+        cursor: pointer;
+        @include templateTransition(all);
+
+        &:hover {
+            background-color: #ea1c2e;
+            -webkit-box-shadow: 2px -4px 47px -7px rgba(218, 33, 48, 1);
+            -moz-box-shadow: 2px -4px 47px -7px rgba(218, 33, 48, 1);
+            box-shadow: 2px -4px 47px -7px rgba(218, 33, 48, 1);
+        }
+
+        &:active {
+            opacity: 0.9;
+        }
+
+        &:disabled {
+            opacity: 0.7;
+            cursor: default;
+        }
+    }
+}

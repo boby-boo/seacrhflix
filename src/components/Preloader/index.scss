@@ -1,0 +1,28 @@
+.preloader-inner {
+    @include templateFlex();
+    height: 50vh;
+}
+
+.preloader {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 5vw;
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0000;
+    -webkit-text-stroke: 1px $light-color;
+    background:
+        linear-gradient(90deg, $light-color 33%, $primary-color 0 67%, $dark-color 0) 0/300% 100% no-repeat text;
+    animation: l2 2s linear infinite;
+}
+
+.loader:before {
+    content: "Loading";
+}
+
+@keyframes l2 {
+    0% {
+        background-position: 100%
+    }
+}

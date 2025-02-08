@@ -1,0 +1,30 @@
+.error {
+    &-row {
+        @include templateFlex(center, center);
+        flex-direction: column;
+        height: 50vh;
+    }
+
+    &-title {
+        font-size: 7vw;
+        color: $primary-color;
+    }
+
+    &-description {
+        margin-bottom: 1vw;
+        font-size: 2vw;
+        text-transform: uppercase;
+    }
+
+    &-gif {
+        width: 40vw;
+        height: auto;
+        border-radius: 30px;
+        overflow: hidden;
+
+        img {
+            @include templateObjectFitCover();
+            object-position: center;
+        }
+    }
+}

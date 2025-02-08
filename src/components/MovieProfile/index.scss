@@ -1,0 +1,44 @@
+.movie-profile {
+    &-img {
+        width: 240px;
+        min-width: 240px;
+        height: 360px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+            @include templateObjectFitCover();
+            object-position: top;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &-text {
+        @include templateFlex(space-between, flex-start);
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &-text__title {
+        text-transform: uppercase;
+        font-size: 2em;
+    }
+
+    &-text__tagline {
+        text-transform: uppercase;
+        font-style: italic;
+        color: $secondary-color;
+    }
+
+    &-text__overview {
+        max-width: 80%;
+        text-align: left;
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+}

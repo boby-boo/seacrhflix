@@ -1,0 +1,30 @@
+table {
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    background-color: transparentize($gray-color, .9);
+    border-radius: 20px;
+
+    @include mobile {
+        margin: 0 auto;
+    }
+
+    tr {
+        padding: 9px 0;
+        @include templateFlex(flex-start, center);
+        gap: 30px;
+
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-color: transparentize($dark-color, .8);
+
+        @include mobile {
+            gap: 20px;
+        }
+    }
+}
+
+.movie-table-info__icon {
+    width: 20px;
+    height: 20px;
+}

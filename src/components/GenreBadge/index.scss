@@ -1,0 +1,19 @@
+.genre-badge {
+    padding: 10px 30px;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    color: $light-color;
+    border-radius: 20px;
+    border: 1px solid transparentize($gray-color, .7);
+    background-color: $dark-color;
+    cursor: pointer;
+    @include templateTransition(background-color);
+
+    &:hover {
+        background-color: $primary-color;
+    }
+
+    &.active {
+        background-color: transparentize($primary-color, .2);
+    }
+}

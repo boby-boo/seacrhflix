@@ -1,0 +1,67 @@
+.movie-card {
+    width: 100%;
+
+    &:hover {
+        .movie-card-img {
+            &:after {
+                opacity: 1;
+            }
+
+            img {
+                transform: scale(1.05)
+            }
+        }
+
+        .movie-card-title {
+            color: $primary-color;
+        }
+    }
+
+    // max-width: 200px;
+
+    &-title {
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        @include templateTransition(color);
+    }
+
+    &-img {
+        position: relative;
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 20px;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparentize(#000, .6);
+            @include templateTransition(opacity);
+        }
+
+        img {
+            @include templateObjectFitCover();
+            @include templateTransition(transform);
+        }
+    }
+
+    &-status {
+        display: inline-block;
+        padding: 5px 10px;
+
+        position: absolute;
+        border-radius: 0 12px 12px 0;
+        top: 20px;
+        left: 0;
+        z-index: 100;
+    }
+}
