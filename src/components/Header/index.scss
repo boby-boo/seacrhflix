@@ -23,6 +23,7 @@
     &-menu {
         @include templateFlex(space-between, center);
         gap: 40px;
+        text-transform: uppercase;
 
         @media (max-width: 425px) {
             gap: 20px;
